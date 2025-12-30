@@ -1,0 +1,8 @@
+com\example\tpspringdatarest\config\DataConfig.class
+com\example\tpspringdatarest\feign\UserFeignClient.class
+com\example\tpspringdatarest\service\UserClientService.class
+com\example\tpspringdatarest\repository\UserRepository.class
+com\example\tpspringdatarest\controller\ClientController.class
+com\example\tpspringdatarest\model\User.class
+com\example\tpspringdatarest\service\UserWebClient.class
+com\example\tpspringdatarest\TpSpringDataRestApplication.class
