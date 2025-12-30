@@ -1,6 +1,6 @@
-# TP Spring Data REST (Server & Client)
+# TP Spring Data REST (Centre & Etudiant)
 
-Projet unique combinant serveur et client.
+Projet fusionné avec architecture complète.
 
 ## 🚀 Lancement
 ```powershell
@@ -8,7 +8,6 @@ mvn spring-boot:run
 ```
 
 ## 🔗 Endpoints
-- Serveur: `/users`
-- Client (RestTemplate): `/client/users/resttemplate`
-- Client (WebClient): `/client/users/webclient`
-- Client (Feign): `/client/users/feign`
+- **H2 Console**: `http://localhost:8080/h2-console` (`jdbc:h2:mem:centredb`)
+- **API Server**: `/centres`, `/etudiants`
+- **Client API**: `/client/centres`, `/client/etudiants`

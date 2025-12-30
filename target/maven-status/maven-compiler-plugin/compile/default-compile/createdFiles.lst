@@ -1,8 +1,10 @@
+com\example\tpspringdatarest\feign\AppFeignClient.class
+com\example\tpspringdatarest\service\RestTemplateService.class
+com\example\tpspringdatarest\service\WebClientService.class
 com\example\tpspringdatarest\config\DataConfig.class
-com\example\tpspringdatarest\feign\UserFeignClient.class
-com\example\tpspringdatarest\service\UserClientService.class
-com\example\tpspringdatarest\repository\UserRepository.class
+com\example\tpspringdatarest\repository\CentreRepository.class
+com\example\tpspringdatarest\repository\EtudiantRepository.class
 com\example\tpspringdatarest\controller\ClientController.class
-com\example\tpspringdatarest\model\User.class
-com\example\tpspringdatarest\service\UserWebClient.class
+com\example\tpspringdatarest\model\Centre.class
+com\example\tpspringdatarest\model\Etudiant.class
 com\example\tpspringdatarest\TpSpringDataRestApplication.class

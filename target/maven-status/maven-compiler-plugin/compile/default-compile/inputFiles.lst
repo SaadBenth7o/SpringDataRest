@@ -1,8 +1,10 @@
-C:\Users\benda\Desktop\Tps\TpSpringDataRest\src\main\java\com\example\tpspringdatarest\model\User.java
-C:\Users\benda\Desktop\Tps\TpSpringDataRest\src\main\java\com\example\tpspringdatarest\service\UserWebClient.java
-C:\Users\benda\Desktop\Tps\TpSpringDataRest\src\main\java\com\example\tpspringdatarest\service\UserClientService.java
+C:\Users\benda\Desktop\Tps\TpSpringDataRest\src\main\java\com\example\tpspringdatarest\repository\EtudiantRepository.java
+C:\Users\benda\Desktop\Tps\TpSpringDataRest\src\main\java\com\example\tpspringdatarest\model\Etudiant.java
+C:\Users\benda\Desktop\Tps\TpSpringDataRest\src\main\java\com\example\tpspringdatarest\service\WebClientService.java
+C:\Users\benda\Desktop\Tps\TpSpringDataRest\src\main\java\com\example\tpspringdatarest\model\Centre.java
 C:\Users\benda\Desktop\Tps\TpSpringDataRest\src\main\java\com\example\tpspringdatarest\config\DataConfig.java
 C:\Users\benda\Desktop\Tps\TpSpringDataRest\src\main\java\com\example\tpspringdatarest\controller\ClientController.java
-C:\Users\benda\Desktop\Tps\TpSpringDataRest\src\main\java\com\example\tpspringdatarest\feign\UserFeignClient.java
-C:\Users\benda\Desktop\Tps\TpSpringDataRest\src\main\java\com\example\tpspringdatarest\repository\UserRepository.java
+C:\Users\benda\Desktop\Tps\TpSpringDataRest\src\main\java\com\example\tpspringdatarest\feign\AppFeignClient.java
 C:\Users\benda\Desktop\Tps\TpSpringDataRest\src\main\java\com\example\tpspringdatarest\TpSpringDataRestApplication.java
+C:\Users\benda\Desktop\Tps\TpSpringDataRest\src\main\java\com\example\tpspringdatarest\service\RestTemplateService.java
+C:\Users\benda\Desktop\Tps\TpSpringDataRest\src\main\java\com\example\tpspringdatarest\repository\CentreRepository.java

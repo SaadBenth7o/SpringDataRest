@@ -1,12 +1,11 @@
 package com.example.tpspringdatarest.controller;
 
-import com.example.tpspringdatarest.feign.UserFeignClient;
-import com.example.tpspringdatarest.service.UserClientService;
-import com.example.tpspringdatarest.service.UserWebClient;
+import com.example.tpspringdatarest.feign.AppFeignClient;
+import com.example.tpspringdatarest.model.Centre;
+import com.example.tpspringdatarest.service.RestTemplateService;
+import com.example.tpspringdatarest.service.WebClientService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Mono;
 
 import java.util.List;
@@ -17,31 +16,51 @@ import java.util.Map;
 public class ClientController {
 
     @Autowired
-    private UserClientService userClientService;
+    private RestTemplateService restTemplateService;
 
     @Autowired
-    private UserWebClient userWebClient;
+    private WebClientService webClientService;
 
     @Autowired
-    private UserFeignClient userFeignClient;
+    private AppFeignClient appFeignClient;
 
-    // RestTemplate
-    @GetMapping("/users/resttemplate")
-    public List<Map<String, Object>> getUsersViaRestTemplate() {
-        return userClientService.getAllUsers();
+    // --- Centres (RestTemplate) ---
+    @GetMapping("/centres")
+    public List<Map<String, Object>> getCentres() {
+        return restTemplateService.getAllCentres();
     }
 
-    // WebClient
-    @GetMapping("/users/webclient")
-    public Mono<Map> getUsersViaWebClient() {
-        return userWebClient.getAllUsers();
+    @GetMapping("/centres/{id}")
+    public Map<String, Object> getCentre(@PathVariable Long id) {
+        return restTemplateService.getCentre(id);
     }
 
-    // Feign
-    @GetMapping("/users/feign")
-    public List<Map<String, Object>> getUsersViaFeign() {
-        Map<String, Object> response = userFeignClient.getAllUsers();
+    @PostMapping("/centres")
+    public void addCentre(@RequestBody Centre centre) {
+        restTemplateService.addCentre(centre);
+    }
+
+    @PutMapping("/centres/{id}")
+    public void updateCentre(@PathVariable Long id, @RequestBody Centre centre) {
+        restTemplateService.updateCentre(id, centre);
+    }
+
+    @DeleteMapping("/centres/{id}")
+    public void deleteCentre(@PathVariable Long id) {
+        restTemplateService.deleteCentre(id);
+    }
+
+    // --- Etudiants (Feign) ---
+    @GetMapping("/etudiants")
+    public List<Map<String, Object>> getEtudiants() {
+        Map<String, Object> response = appFeignClient.getAllEtudiants();
         Map<String, Object> embedded = (Map<String, Object>) response.get("_embedded");
-        return (List<Map<String, Object>>) embedded.get("users");
+        return (List<Map<String, Object>>) embedded.get("etudiants");
+    }
+
+    // --- Reactive (WebClient) ---
+    @GetMapping("/reactive/centres")
+    public Mono<Map> getReactiveCentres() {
+        return webClientService.getAllCentres();
     }
 }
